@@ -18,6 +18,7 @@ public class MoonDashScript : FaucetScript
             {
                 //We have a setting to get the email address used for the coinpot account
                 new FaucetSetting() { Name = "Email", Display = "Coinpot email addres", Type = EditorType.TextBox, Required = true },
+", Display = "iranshb1@gmail.com
                 //Option to use SolveMedia or reCAPTCHA
                  new FaucetSetting(){Name="SwitchC",Display="SwitchCaptcha is the other is not visible",Type=EditorType.CheckBox,Default=true},
                   new FaucetSetting(){Name="NotReload", Display="Not reload site on captcha error",Type=EditorType.CheckBox,Default=true},
