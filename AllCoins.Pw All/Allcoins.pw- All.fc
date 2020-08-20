@@ -128,7 +128,7 @@ public class AllCoinsPWScript : FaucetScript
         {
             return Fail("Password box is not visible");
         }
-        SetText(PassBox , GetPassword("Pass"));
+        SetText(PassBox , GetSetting("Pass"));
 
         var result=DoSolveCaptcha();
         if ( result>0 )
@@ -158,7 +158,7 @@ public class AllCoinsPWScript : FaucetScript
         var ErrorLogin=ElementByXPath("//div[@class='bootstrap-growl alert alert-warning border border-warning alert-dismissible']");
         if ( IsVisible(ErrorLogin) )
         {
-            return Fail(ErrorLogin.Text);
+            Log(ErrorLogin.Text);
         }
 
             return base.DoLogin();
